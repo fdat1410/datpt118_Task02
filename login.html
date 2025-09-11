@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="w-[100vw] h-[100vh] flex items-center justify-center bg-[url('./img/bg.png')] bg-cover bg-center">
+    <main>
+        <section class="login m-0 p-[15px] flex flex-col items-center justify-center bg-white rounded-[16px] shadow-lg p-[32px]">
+            <h1 class="">Login</h1> 
+            <form action="" class="login-form" method="POST">
+                <div class="form-group flex flex-col">
+                    <label for="username" class="form-control-label">Username</label>
+                    <input type="text" name="username" id="username" class="form-control border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your username" required autofocus>
+                </div>
+                <div class="form-group flex flex-col">
+                    <label for="password" class="form-control-label">Password</label>
+                    <input type="password" name="password" id="password" class="form-control border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your password" required>
+                </div>
+                <div class="buttons">
+                    <button class="btn btn-back">Back to Home</button>
+                    <button type="submit" class="btn btn-login">Login</button>
+                </div>
+                <div class="links">
+                    <div><a href="#">Forgot Password?</a></div>
+                    <div><a href="#">Don't have an account? Register</a></div>
+                </div>
+            </form>
+        </section>
+    </main>
+</body>
+
+</html>

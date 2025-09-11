@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body class="w-[100vw] h-[100vh] p-4 flex items-center justify-center bg-[url('./img/bg.png')] bg-cover bg-center">
+    <main class="w-[100%] md:w-[40%]">
+        <section class="w-[100%] p-[15px] flex flex-col items-center justify-center bg-white rounded-[16px] shadow-lg p-[32px]">
+            <h1 class="font-bold text-[32px] font-[700] p-[16px] m-0">Register</h1>
+            <form action="" class="w-[100%]" method="POST">
+                <div class="grid grid-cols-1 md:grid-cols-2 gap-x-[16px]">
+                    <div class="flex flex-col">
+                        <label for="firstName" class="text-[16px] font-[400]">First Name</label>
+                        <input type="text" name="firstName" id="firstName" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your first name" required autofocus>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="lastName" class="text-[16px] font-[400]">Last Name</label>
+                        <input type="text" name="lastName" id="lastName" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your last name" required>
+                    </div>
+                    <div class="md:col-span-2 flex flex-col">
+                        <label for="email" class="text-[16px] font-[400]">Email Address</label>
+                        <input type="email" name="email" id="email" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your email" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="username" class="text-[16px] font-[400]">Username</label>
+                        <input type="text" name="username" id="username" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your username" required>
+                    </div>
+                    <div class="flex flex-col">
+                        <label for="phone" class="text-[16px] font-[400]">Phone Number</label>
+                        <input type="tel" name="phone" id="phone" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your phone number" required>
+                    </div>
+                    <div class="md:col-span-2 flex flex-col">
+                        <label for="password" class="text-[16px] font-[400]">Password</label>
+                        <input type="password" name="password" id="password" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Enter your password" required>
+                    </div>
+                    <div class="md:col-span-2 flex flex-col">
+                        <label for="confirmPassword" class="text-[16px] font-[400]">Confirm Password</label>
+                        <input type="password" name="confirmPassword" id="confirmPassword" class="text-[16px] font-[400] border rounded-[8px] py-[8px] px-[16px] mt-[5px] mb-[10px]" placeholder="Confirm your password" required>
+                    </div>
+                </div>
+                <div class="mt-[8px] flex justify-between *:w-[48%] *:rounded-[4px] *:py-[8px] *:px-[16px] *:text-[20px] *:font-[400]">
+                    <a href="#" class="text-center hover:bg-gray-200">Back to Home</a>
+                    <button type="submit" class="bg-blue-400 hover:bg-blue-700 text-white">Register</button>
+                </div>
+                <div class="text-center *:mt-[16px]">
+                    <div><a href="login.html">Already have an account? Login</a></div>
+                </div>
+            </form>
+        </section>
+    </main>
+
+</body>
+
+</html>
+

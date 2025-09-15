@@ -1,0 +1,452 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Question Management - Quiz App</title>
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+</head>
+
+<body>
+    <main>
+        <!-- Header -->
+        <header class="flex justify-center items-center border-b-[1px] border-[#ccc]">
+            <nav class="w-[80%] flex justify-between items-center px-[16px] py-[8px]">
+                <div>
+                    <img src="./img/brand.png" alt="brand" class="h-[30px]">
+                </div>
+                <div class="flex flex-col md:flex-row gap-x-[16px] text-[16px] font-[400]">
+                    <div class=""><a href="home_authen.html">Home</a></div>
+                    <div class=""><a href="">Quizzes</a></div>
+                    <div class=""><a href="">Management</a></div>
+                    <div class=""><a href="about.html">About</a></div>
+                    <div class=""><a href="contact.html">Contact</a></div>
+                </div>
+                <div>
+                    <img src="./img/profile-avatar.png" alt="profile-avatar" class="h-[30px]">
+                </div>
+            </nav>
+        </header>
+
+        <!-- Content -->
+        <div class="flex">
+            <!-- Sidebar -->
+            <div class="w-[15%] border-r-[1px] border-[#ccc]">
+                <h3 class="text-[28px] font-[700] p-[20px_16px] m-0 border-b-[1px] border-[#ccc]">Menu</h3>
+                <div
+                    class="flex items-center p-[16px] text-[20px] font-[600] border-b-[1px] border-[#ccc] cursor-pointer">
+                    <img src="./img/person-circle-question-solid.svg.png" alt="quiz" class="h-[10px] mr-[5px]">
+                    <b class="text-[12px]">Quiz Management</b>
+                </div>
+                <div
+                    class="flex items-center p-[16px] text-[20px] font-[600] border-b-[1px] border-[#ccc] cursor-pointer bg-[#f0f0f0]">
+                    <img src="./img/question-solid.svg.png" alt="question" class="h-[10px] mr-[5px]">
+                    <b class="text-[12px]">Question Management</b>
+                </div>
+                <div
+                    class="flex items-center p-[16px] text-[20px] font-[600] border-b-[1px] border-[#ccc] cursor-pointer">
+                    <img src="./img/user-solid.svg.png" alt="user" class="h-[10px] mr-[5px]">
+                    <b class="text-[12px]">User Management</b>
+                </div>
+                <div
+                    class="flex items-center p-[16px] text-[20px] font-[600] border-b-[1px] border-[#ccc] cursor-pointer">
+                    <img src="./img/user-shield-solid.svg.png" alt="role" class="h-[10px] mr-[5px]">
+                    <b class="text-[12px]">Role Management</b>
+                </div>
+            </div>
+
+            <!-- Main Content -->
+            <div class="w-[85%] p-0">
+                <!-- Question Management Section -->
+                <div class="m-[16px] border border-[#ccc] rounded-[8px]">
+                    <div class="text-[16px] font-[700] p-[16px] m-0 border-b-[1px] border-[#ccc]">Question Management
+                    </div>
+                    <div class="p-[8px_16px] border-b-[1px] border-[#ccc]">
+                        <div class="flex flex-col gap-[10px]">
+                            <div class="flex gap-[10px] w-full">
+                                <div class="w-[50%]">
+                                    <label for="questionName" class="block text-[16px] font-[400] mb-[5px]">Name</label>
+                                    <input type="text" name="questionName" id="questionName"
+                                        class="w-[100%] p-[8px_16px] border border-[#ccc] rounded-[8px] text-[16px] font-[400]"
+                                        placeholder="Enter role name to search" required>
+                                </div>
+                                <div class="w-[50%]">
+                                    <label for="questionType" class="block text-[16px] font-[400] mb-[5px]">Type</label>
+                                    <select id="questionType"
+                                        class="w-[100%] p-[8px_16px] border border-[#ccc] rounded-[8px] text-[16px] font-[400]">
+                                        <option>Select item</option>
+                                        <option>SingleChoice</option>
+                                        <option>MultipleChoice</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="w-full">
+                                <label for="questionStatus" class="block text-[16px] font-[400] mb-[5px]">Status</label>
+                                <div class="flex items-center gap-[5px] mt-[5px]">
+                                    <input type="checkbox" name="questionStatus" id="questionStatus">
+                                    <label for="questionStatus">Active</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="flex justify-between items-center p-[8px_16px]">
+                        <button
+                            class="bg-blue-400 hover:bg-blue-700 text-white font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                            <img src="./img/plus-solid.png" alt="plus" class="w-[15px]">
+                            Create
+                        </button>
+                        <div class="flex gap-[10px]">
+                            <button
+                                class="bg-white hover:bg-gray-200 text-black font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                                <img src="./img/rotate-left-solid.png" alt="clear" class="w-[15px]">
+                                Clear
+                            </button>
+                            <button
+                                class="bg-blue-400 hover:bg-blue-700 text-white font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                                <img src="./img/magnifying-glass-solid.svg.png" alt="search" class="w-[15px]">
+                                Search
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Question List Section -->
+                <div class="m-[16px] mb-[10px] border border-[#ccc] rounded-[8px]">
+                    <div class="text-[16px] font-[700] p-[16px] m-0 border-b-[1px] border-[#ccc]">Question List</div>
+                    <div class="overflow-x-auto border-b-[1px] border-[#ccc]">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Content</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Type</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Answers</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Status</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-[#f0efef] hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">Who is the inventor of the airplane?</td>
+                                    <td class="p-[10px] text-left text-[14px]">MultipleChoice</td>
+                                    <td class="p-[10px] text-left text-[14px]">4</td>
+                                    <td class="p-[10px] text-left text-[14px]">Yes</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">Who is the inventor of the World Wide
+                                        Web?</td>
+                                    <td class="p-[10px] text-left text-[14px]">MultipleChoice</td>
+                                    <td class="p-[10px] text-left text-[14px]">4</td>
+                                    <td class="p-[10px] text-left text-[14px]">Yes</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#f0efef] hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">Where is Viet Nam?</td>
+                                    <td class="p-[10px] text-left text-[14px]">MultipleChoice</td>
+                                    <td class="p-[10px] text-left text-[14px]">4</td>
+                                    <td class="p-[10px] text-left text-[14px]">Yes</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">What is the capital of France?</td>
+                                    <td class="p-[10px] text-left text-[14px]">SingleChoice</td>
+                                    <td class="p-[10px] text-left text-[14px]">4</td>
+                                    <td class="p-[10px] text-left text-[14px]">cell</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="bg-[#f0efef] hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">Who is the inventor of the alternating
+                                        current?</td>
+                                    <td class="p-[10px] text-left text-[14px]">MultipleChoice</td>
+                                    <td class="p-[10px] text-left text-[14px]">4</td>
+                                    <td class="p-[10px] text-left text-[14px]">cell</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex justify-between items-center text-[14px] p-[8px_16px]">
+                        <div class="text-[16px] font-[400]">
+                            <label for="pageSize">Items per page:</label>
+                            <select id="pageSize" class="ml-[5px] border pl-[16px]">
+                                <option>5</option>
+                                <option selected>10</option>
+                                <option>20</option>
+                                <option>50</option>
+                            </select>
+                        </div>
+                        <div class="flex gap-[5px]">
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">«</button>
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">‹</button>
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">1</button>
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">2</button>
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">3</button>
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">›</button>
+                            <button
+                                class="border border-blue-400 bg-white text-blue-400 rounded-[50%] p-[5px_12px] cursor-pointer">»</button>
+                        </div>
+                        <div class="text-[16px] font-[400]">1–10 of 32</div>
+                    </div>
+                </div>
+
+                <!-- Add Question Section -->
+                <div class="m-[16px] mb-[10px] border border-[#ccc] rounded-[8px]">
+                    <div class="text-[16px] font-[700] p-[16px] m-0 border-b-[1px] border-[#ccc]">Add Question</div>
+                    <form class="p-0 m-[16px]">
+                        <div class="flex gap-[10px]">
+                            <div class="w-[50%] mb-[10px]">
+                                <label for="content" class="text-[16px] font-[400]">Content</label>
+                                <textarea name="content" id="content"
+                                    class="w-full p-[8px_16px] border border-[#ccc] rounded-[8px] mt-[5px]"
+                                    placeholder="Enter question content"></textarea>
+                            </div>
+                            <div class="w-[50%] mb-[10px]">
+                                <label for="questionType" class="text-[16px] font-[400]">Question Type</label>
+                                <select id="questionType"
+                                    class="w-full p-[8px_16px] border border-[#ccc] rounded-[8px] mt-[5px]">
+                                    <option>Select Question Type</option>
+                                    <option>SingleChoice</option>
+                                    <option>MultipleChoice</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="w-full">
+                            <div class="mb-[10px]">
+                                <label class="text-[16px] font-[400]">Status</label>
+                                <div class="flex items-center gap-[5px] mt-[5px]">
+                                    <input id="active" type="checkbox" />
+                                    <label for="active" class="m-0">Active</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="flex justify-between items-center p-[8px_16px] border-t-[1px] border-[#ccc]">
+                        <button
+                            class="bg-blue-400 hover:bg-blue-700 text-white font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                            <img src="./img/plus-solid.png" alt="plus" class="w-[15px]">
+                            Show Answers
+                        </button>
+                        <div class="flex gap-[5px]">
+                            <button
+                                class="bg-white hover:bg-gray-200 text-black font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                                <img src="./img/rotate-left-solid.png" alt="cancel" class="w-[15px]">
+                                Cancel
+                            </button>
+                            <button
+                                class="bg-blue-400 hover:bg-blue-700 text-white font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                                <img src="./img/floppy-disk-regular.png" alt="save" class="w-[15px]">
+                                Save
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Answer List Section -->
+                <div class="m-[16px] mb-[10px] border border-[#ccc] rounded-[8px]">
+                    <div class="text-[16px] font-[700] p-[16px] m-0 border-b-[1px] border-[#ccc]">Answer List</div>
+                    <div class="overflow-x-auto border-b-[1px] border-[#ccc]">
+                        <table class="w-full border-collapse">
+                            <thead>
+                                <tr>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Content</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Is Correct</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Status</th>
+                                    <th class="p-[10px] text-left text-[14px] bg-white">Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="bg-[#f0efef] hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">Wright brothers</td>
+                                    <td class="p-[10px] text-left text-[14px]">True</td>
+                                    <td class="p-[10px] text-left text-[14px]">Yes</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr class="hover:bg-[#f1f1f1]">
+                                    <td class="p-[10px] text-left text-[14px]">Alexander Graham Bell</td>
+                                    <td class="p-[10px] text-left text-[14px]">False</td>
+                                    <td class="p-[10px] text-left text-[14px]">Yes</td>
+                                    <td class="p-[10px] text-left text-[14px]">
+                                        <div class="flex gap-[10px]">
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/pen-to-square-solid.svg.png" alt="edit"
+                                                    class="w-[20px]">
+                                            </a>
+                                            <a href="#" class="text-[18px] cursor-pointer no-underline">
+                                                <img src="./img/trash-can-regular.svg.png" alt="delete"
+                                                    class="w-[20px]">
+                                            </a>
+                                        </div>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="flex justify-end items-center p-[8px_16px]">
+                        <button
+                            class="bg-blue-400 hover:bg-blue-700 text-white font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                            <img src="./img/plus-solid.png" alt="plus" class="w-[15px]">
+                            Add
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Add Answer Section -->
+                <div class="m-[16px] mb-[10px] border border-[#ccc] rounded-[8px]">
+                    <div class="text-[16px] font-[700] p-[16px] m-0 border-b-[1px] border-[#ccc]">Add Answer</div>
+                    <form class="p-0 m-[16px]">
+                        <div class="w-full mb-[10px]">
+                            <label for="description" class="text-[16px] font-[400]">Description</label>
+                            <textarea name="description" id="description"
+                                class="w-full p-[8px_16px] border border-[#ccc] rounded-[8px] mt-[5px]"
+                                placeholder="Enter your email"></textarea>
+                        </div>
+                        <div class="flex gap-[10px]">
+                            <div class="w-[50%] mb-[10px]">
+                                <label class="text-[16px] font-[400]">Is Correct?</label>
+                                <div class="flex items-center gap-[5px] mt-[5px]">
+                                    <input id="isCorrect" type="checkbox" />
+                                    <label for="isCorrect" class="m-0">Active</label>
+                                </div>
+                            </div>
+                            <div class="w-[50%] mb-[10px]">
+                                <label class="text-[16px] font-[400]">Status</label>
+                                <div class="flex items-center gap-[5px] mt-[5px]">
+                                    <input id="answerStatus" type="checkbox" />
+                                    <label for="answerStatus" class="m-0">Active</label>
+                                </div>
+                            </div>
+                        </div>
+                    </form>
+                    <div class="flex justify-end items-center p-[8px_16px] border-t-[1px] border-[#ccc]">
+                        <button
+                            class="bg-blue-400 hover:bg-blue-700 text-white font-[400] text-[20px] p-[8px_16px] rounded-[4px] border-none cursor-pointer flex items-center gap-[5px]">
+                            <img src="./img/plus-solid.png" alt="plus" class="w-[15px]">
+                            Add
+                        </button>
+                    </div>
+                </div>
+                <!-- Footer -->
+                <footer class="border-t-[1px] border-[#ccc]">
+                    <div class="flex justify-between *:p-[16px] w-[80%] m-auto *:text-[16px] *:font-[400]">
+                        <div class="w-1/2">
+                            <div>
+                                <img src="./img/brand.png" alt="brand" class="h-[30px]">
+                            </div>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+                                ut
+                                labore et dolore magna aliqua.</p>
+                        </div>
+                        <div class="w-1/5">
+                            <div class="text-[28px] font-[400]">Menu</div>
+                            <div class="text-blue-400">
+                                <p><a href="home_authen.html">Home</a></p>
+                            </div>
+                            <div class="text-blue-400">
+                                <p><a href="#">Quizzes</a></p>
+                            </div>
+                            <div class="text-blue-400">
+                                <p><a href="about.html">About</a></p>
+                            </div>
+                            <div class="text-blue-400">
+                                <p><a href="contact.html">Contact</a></p>
+                            </div>
+                        </div>
+                        <div class="w-1/5">
+                            <div class="text-[28px] font-[400]">Contact</div>
+                            <div class="contact-items flex items-center gap-x-[5px] text-blue-400">
+                                <img src="./img/envelope-regular.png" alt="email" class="h-[10px]">
+                                <p><a href="">congdinh2021@gmail.com</a></p>
+                            </div>
+                            <div class="contact-items flex items-center gap-x-[5px] text-blue-400">
+                                <img src="./img/phone-solid.png" alt="phone" class="h-[10px]">
+                                <p><a href="">+84 944 551 356</a></p>
+                            </div>
+                            <div class="contact-items flex items-center gap-x-[5px] text-blue-400">
+                                <img src="./img/location-dot-solid.png" alt="location" class="h-[10px]">
+                                <p><a href="">123 Xuan Dinh, Bac Tu Liem, Ha Noi, Viet Nam</a></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="w-[80%] border-t border-[#ccc] m-auto text-center p-[16px] text-[16px] font-[400]">
+                        © May 2024 - ReactJS 19
+                    </div>
+                </footer>
+            </div>
+        </div>
+    </main>
+</body>
+
+</html>
